@@ -1,0 +1,9 @@
+[submodule "repos/OpenPCDet-Mark-thesis"]
+	path = repos/OpenPCDet-Mark-thesis
+	url = git@github.com:yahoo55025502/OpenPCDet-Mark-thesis.git
+[submodule "repos/MODEST"]
+	path = repos/MODEST
+	url = git@github.com:YurongYou/MODEST.git
+[submodule "repos/wayside-portal"]
+	path = repos/wayside-portal
+	url = git@github.com:NEWSLabNTU/wayside-portal.git
