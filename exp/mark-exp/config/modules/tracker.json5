@@ -56,6 +56,6 @@
     }],
     "lidar_coverage_threshold": 0.15,
     "info_saving_config":{
-        "file_dir": "/mnt/mark-disk/self-training-data/tracking-info"
+        "file_dir": "../../../../output/tracking-info"
     }
 }

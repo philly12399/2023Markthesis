@@ -1,4 +1,4 @@
 {
-    "nuscenes_wayside_dir": "/mnt/mark-disk/nuscenes/wayside",
+    "nuscenes_wayside_dir": "../../../../data/nuscenes-wayside-format",
     "amqp_producer": "../connects/amqp-nuscenes-data-loader.json",
 }

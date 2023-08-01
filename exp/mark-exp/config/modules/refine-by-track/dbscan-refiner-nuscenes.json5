@@ -1,0 +1,24 @@
+{
+    "input_dir": "/mnt/mark-disk/self-training-data/nuscenes-tracking-info/exp4-refactor-tracker/input_track",
+    "num_output_frames": 25000,
+    "num_devices": 1,
+    "num_search_objects": 20,
+    "debug_mode": false,
+    "only_filter": false,
+    "keep_noise": false,
+    "use_nuscenes": true,
+    "unify_class": false,
+    "min_moving_distance": 7,
+    "min_bounding_points": 25,
+    "kitti_format_config": {
+        "subsample_factor": 1,
+        "save_points": true,
+        "set_large_object_to_bus": true,
+        "infra": "/home/yahoo55025502/wayside-portal/exp/mark-exp/config/params.json",
+        "major_device": "wayside_1.lidar1",
+        "save_devices": [
+            "wayside_1.lidar1"
+        ],
+        "pcd_dir": "/mnt/mark-disk/nuscenes/wayside/pointcloud"
+    }
+}

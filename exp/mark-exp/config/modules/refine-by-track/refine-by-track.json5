@@ -1,0 +1,21 @@
+{
+    "input_dir": "/mnt/nfs/wayside_team/mark_thesis_data/139-exp-output/tracking-info//2023-05-03T04:06:49.631774266+08:00",
+    "num_output_frames": 5000,
+    "num_devices": 1,
+    "num_search_objects": 20,
+    "debug_mode": false,
+    "only_filter": true,
+    "keep_noise": false,
+    "use_nuscenes": false,
+    "min_moving_distance": 7,
+    "min_bounding_points": 25,
+    "kitti_format_config": {
+        "subsample_factor": 1,
+        "infra": "/home/yahoo55025502/wayside-portal/exp/mark-exp/config/params.json",
+        "major_device": "wayside_1.lidar1",
+        "save_devices": [
+            "wayside_1.lidar1"
+        ],
+        "pcd_dir": "/mnt/nfs/wayside_team/mark_thesis_data/self-training-data/pcd-files/pointcloud-lidar1"
+    }
+}

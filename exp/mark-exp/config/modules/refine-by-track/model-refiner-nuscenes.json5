@@ -1,0 +1,24 @@
+{
+    "input_dir": "/mnt/mark-disk/self-training-data/nuscenes-tracking-info/2023-07-09T11:32:29.380322957+08:00",
+    "num_output_frames": 25000,
+    "num_devices": 1,
+    "num_search_objects": 20,
+    "debug_mode": false,
+    "only_filter": true,
+    "keep_noise": false,
+    "use_nuscenes": true,
+    "unify_class": false,
+    "min_moving_distance": 3,
+    "min_bounding_points": 10,
+    "kitti_format_config": {
+        "subsample_factor": 1,
+        "save_points": true,
+        "set_large_object_to_bus": true,
+        "infra": "/home/yahoo55025502/wayside-portal/exp/mark-exp/config/params.json",
+        "major_device": "wayside_1.lidar1",
+        "save_devices": [
+            "wayside_1.lidar1"
+        ],
+        "pcd_dir": "/mnt/mark-disk/nuscenes/wayside/pointcloud"
+    }
+}
