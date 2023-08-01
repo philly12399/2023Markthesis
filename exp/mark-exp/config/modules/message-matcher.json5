@@ -1,0 +1,11 @@
+{
+    "version": "0.3.0",
+    "dataflow": "dataflow.json5",
+    "params": {
+        "complete_matching_only": true,
+        "window_size": "50ms",
+        // "start_time": "2021-08-28T01:04:00.000000000",
+        "max_pending_msgs": 50,
+    },
+    "infra": "../params.json",
+}

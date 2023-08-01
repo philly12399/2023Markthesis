@@ -1,0 +1,14 @@
+{
+    "id": 0,
+    "sensor_id": 0,
+    "sensor_name": "wayside_1",
+    "sensor_twd97_x": 272395.251785212,
+    "sensor_twd97_y": 2768038.61382987,
+    "sensor_x": 0.0,
+    "sensor_y": 0.0,
+    "location_type": 1,
+    "facing_azimuth": 311.0,
+    "depression_angle": 0.0,
+    "depression_angle_x_axis": 0.0,
+    "sensor_height_in_meters": 1.3999997
+}

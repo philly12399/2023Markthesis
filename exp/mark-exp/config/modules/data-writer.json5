@@ -1,0 +1,22 @@
+{
+    "version": "0.4.0",
+    "dataflow": "dataflow.json5",
+    "infra": "../params.json",
+    "device_to_save": "wayside_3.lidar1",
+    "output_dir": "../../data-writer-output",
+    // "output_dir": "/mnt/nfs/wayside_team/mark_thesis_data/self-training-data/data-writer-output",
+    "num_frames": 50000,
+    "active_only": false,
+    "save_pcd": true,
+    "save_img": false,
+    "save_det": true,
+    "xyz_only": false,
+    "starting_times": [
+      // 1630112473879021914
+      // 1630112667266423613, // blue truck
+      // 1630112668762393661,
+      // 1630112677138042512,
+      // 1630112681000000001,
+      0,
+    ]
+}

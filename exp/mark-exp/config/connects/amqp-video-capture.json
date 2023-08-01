@@ -1,0 +1,7 @@
+{
+    "type": "amqp",
+    "address": "amqp://127.0.0.1:5672/%2f",
+    "exchange": "VIDEO_CAPTURE",
+    "max_length": 1,
+    "reliable": true
+}

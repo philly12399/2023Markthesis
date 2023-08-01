@@ -1,0 +1,16 @@
+{
+    "version": "0.3.0",
+    "enable_gui": false,
+    "dataflow": "dataflow.json5",
+    "logging": {
+        "enabled": false,
+        "output_dir": "./output"
+    },
+    "clock": {
+        "RebasedMonotonicSteady": {
+            "rebase_every": "1d",
+        }
+    },
+    "data": "../dataset.json",
+    "infra": "../params.json",
+}

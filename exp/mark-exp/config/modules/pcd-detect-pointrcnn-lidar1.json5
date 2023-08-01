@@ -1,0 +1,23 @@
+{
+    "host_names": [
+        "pcd-detect"
+    ],
+    "major_lidar_device": {
+        "host": "wayside_1",
+        "device": "lidar1"
+    },
+    "enable_gui": false,
+    "torch_device": "cuda:0",
+    "cfg_base_dir": "../../../../py-bin/pcd-detect",
+    "cfg": "../../../../py-bin/pcd-detect/pcd_detect/cfgs/kitti_models/pointrcnn_wayside.yaml",
+    "ckpt": "/home/yahoo55025502/OpenPCDet-Mark-thesis/output/kitti_models/pointrcnn_ST-lidar1-r15/default/ckpt/checkpoint_epoch_80.pth",
+    "logging": {
+        "enabled": false,
+        "logging_dir": "../../output/pcd-detect"
+    },
+    "amqp_consumer": "../connects/amqp-pcd-process.json",
+    "amqp_producer": "../connects/amqp-pcd-detect.json",
+    "params_dir": "../params",
+    "score_threshold": 0.3,
+    "bbox_id_last_frame_num": 5
+}

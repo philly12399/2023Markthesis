@@ -1,0 +1,18 @@
+{
+    "version": "0.3.0",
+    "enable_gui": false,
+    "generate_bbox": true,
+    "consumer": "../connects/file-pcd-process.json",
+    "producer": "../connects/amqp-pcd-detect.json",
+    "cluster": {
+        "max_neighbor_distance": 0.5,
+        "min_neighbor_count": 4,
+        "distinct_object_penalty": 0.05,
+        "respect_image_objects": false,
+    },
+    "min_point_in_box": 30,
+    // "temp_assoc": {
+    //     "max_point_distance": 0.5,
+    //     "iou_thresh": 0.3,
+    // },
+}

@@ -1,0 +1,62 @@
+{
+    "host_names": ["pcd-detect"],
+    "major_lidar_device": {
+        "host": "wayside_1",
+        "device": "lidar1",
+    },
+    "enable_gui": false,
+    "torch_device": "cuda:0",
+    "cfg_base_dir": "../../../../py-bin/pcd-detect",
+    
+    // "cfg": "../../../../py-bin/pcd-detect/pcd_detect/cfgs/kitti_models/pv_rcnn_wayside_no_filter_difficult_split_lidar.yaml",
+    
+    // "cfg": "../../../../py-bin/pcd-detect/pcd_detect/cfgs/kitti_models/pv_rcnn_wayside.yaml",
+
+    // "ckpt": "/media/mark/67b4f98e-0e9e-4676-9e2d-3c2349861923/OpenPCDET-output/kitti_models/pv_rcnn_wayside_no_filter_difficult_split_lidar/20220829/ckpt/checkpoint_epoch_6.pth",
+    
+    // "ckpt": "/home/mark/Downloads/pvrcnn_wayside_split_lidar.pth",
+    // "ckpt": "/home/mark/Downloads/checkpoint_epoch_80.pth",
+    // "ckpt": "/home/mark/Downloads/checkpoint_epoch_30.pth",
+    // "ckpt": "/home/mark/Downloads/20220713_pvrcnn_e80.pth",
+
+
+    // "cfg": "../../../../py-bin/pcd-detect/pcd_detect/cfgs/kitti_models/pv_rcnn.yaml",
+    // "ckpt": "../../../../py-bin/pcd-detect/pcd_detect/pv_rcnn_8369.pth",
+
+    // "cfg": "../../../../py-bin/pcd-detect/pcd_detect/cfgs/kitti_models/pv_rcnn_wayside_no_filter_difficult_split_lidar_no_truck.yaml",
+    // "ckpt": "/home/mark/pvrcnn_20220910.pth",
+
+    // "cfg": "../../../../py-bin/pcd-detect/pcd_detect/cfgs/kitti_models/pv_rcnn_wayside_no_filter_difficult_split_lidar_no_truck.yaml",
+    "cfg": "../../../../py-bin/pcd-detect/pcd_detect/cfgs/kitti_models/pv_rcnn_2022-01-12.yaml",
+    // "ckpt": "/home/mark/pvrcnn_20220915.pth",
+    // "ckpt": "/home/mark/temp-data/20221024/checkpoint_epoch_80.pth",
+    // "ckpt": "/home/mark/temp-data/2023-0103/2023-0103-st-r0-pvrcnn.pth",
+    // Self-Training r0 pvrcnn
+    // "ckpt": "/mnt/nfs/wayside_team/mark_thesis_data/139-openpcdet-output/kitti_models/pv_rcnn_2022-01-12/default/ckpt/checkpoint_epoch_80.pth",
+    // Self-Training r1 pvrcnn
+    // "ckpt": "/mnt/nfs/wayside_team/mark_thesis_data/139-openpcdet-output/kitti_models/pv_rcnn_2022-01-12/self-training-r1/ckpt/checkpoint_epoch_80.pth",
+    // Self-Training r2 pvrcnn
+    // "ckpt": "/mnt/nfs/wayside_team/mark_thesis_data/139-openpcdet-output/kitti_models/pv_rcnn_2022-01-12/self-training-r2/ckpt/checkpoint_epoch_80.pth",
+    // Self-Training r3 pvrcnn
+    // "ckpt": "/mnt/nfs/wayside_team/mark_thesis_data/139-openpcdet-output/kitti_models/pv_rcnn_2022-01-12/self-training-r3/ckpt/checkpoint_epoch_80.pth",
+    // Self-Training r4 pvrcnn
+    // "ckpt": "/mnt/nfs/wayside_team/mark_thesis_data/139-openpcdet-output/kitti_models/pv_rcnn_2022-01-12/self-training-r4/ckpt/checkpoint_epoch_80.pth",
+    // Self-Training r5 pvrcnn
+    "ckpt": "/mnt/nfs/wayside_team/mark_thesis_data/139-openpcdet-output/kitti_models/pv_rcnn_2022-01-12/self-training-r5/ckpt/checkpoint_epoch_80.pth",
+
+
+    "logging": {
+        "enabled": false,
+        "logging_dir" : "../../output/pcd-detect",
+        // // each sequence is defined by start timestamp (in seconds) and end timestamp
+        // "logging_sequence": [[1628032347, 1628032349],
+        //                      [1628032351, 1628032353]]
+    },
+    "amqp_consumer": "../connects/amqp-pcd-process.json",
+    // "amqp_consumer": "../connects/file-pcd-process.json",
+    "amqp_producer": "../connects/amqp-pcd-detect.json",
+    // "amqp_producer": "../connects/file-pcd-detect.json",
+    "params_dir": "../params",
+    "score_threshold": 0.3,
+    "bbox_id_last_frame_num": 5,
+}

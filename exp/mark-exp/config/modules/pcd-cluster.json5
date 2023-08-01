@@ -1,0 +1,47 @@
+{
+    "version": "0.4.0",
+    "dataflow": "dataflow.json5",
+    "infra": "../params.json",
+    "enable_gui": true,
+    "generate_bbox": true,
+    "set_bbox_to_ground": true,
+    "cluster": {
+        "max_neighbor_distance": 0.5,
+        "min_neighbor_count": 4,
+        "distinct_object_penalty": 0.05,
+        "respect_image_objects": false,
+    },
+    "min_point_in_box": 50,
+    "min_box_area": 0.1,
+    "box_enhance_config":{
+        "enable": false,
+        "anchor_sets": [{
+            "class": "Car",
+            "anchors": [{
+                "len_x": 5.5,
+                "len_y": 2.5,
+                "len_z": 2.0,
+                "center_dist": 3.0,
+                "min_x": 0.0,
+                "min_y": 0.0,
+                "min_z": 0.0,
+            }, {
+                "len_x": 2.5,
+                "len_y": 5.5,
+                "len_z": 2.0,
+                "center_dist": 3.0,
+                "min_x": 0.0,
+                "min_y": 0.0,
+                "min_z": 0.0,
+            }],
+            "merge_min_x": 1.0,
+            "merge_min_y": 1.0,
+            "side_dist_thresh": 0.5,
+        }],
+        "filter_small_box": 0.5,
+    },
+    // "temp_assoc": {
+    //     "max_point_distance": 0.5,
+    //     "iou_thresh": 0.3,
+    // },
+}

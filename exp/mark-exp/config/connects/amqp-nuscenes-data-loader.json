@@ -1,0 +1,10 @@
+{
+    "type": "amqp",
+    "address": "amqp://127.0.0.1:5672/%2f",
+    "exchange": "WAYSIDE_NUSCENES_DATA_LOADER",
+    "max_length": 10,
+    "reliable": true
+    // "type": "unix",
+    // "force": true,
+    // "path": "/mnt/mark-disk/nuscenes-data-loader"
+}

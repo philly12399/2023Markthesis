@@ -1,0 +1,14 @@
+{
+    "id": 0,
+    "sensor_id": 0,
+    "road_id": 0,
+    "city": "桃園市",
+    "road_name": "高鐵北路二段",
+    "start": "高鐵北路二段",
+    "end": "高鐵北路二段",
+    "direction": "S",
+    "road_lanenum": 2,
+    "detection_lanenum": 2,
+    "road_class": 3,
+    "detection_type": 1
+}

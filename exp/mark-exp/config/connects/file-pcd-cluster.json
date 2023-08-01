@@ -1,0 +1,5 @@
+{
+    "type": "file",
+    "dir": "../../cache/pcd-cluster",
+    "auto_clean": true,
+}

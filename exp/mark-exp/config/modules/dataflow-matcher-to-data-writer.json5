@@ -1,0 +1,158 @@
+{
+    "version": "0.1.0",
+    "processors": [
+        // data preprocess
+        "video-capture",
+        "lidar-scan",
+        "message-matcher",
+
+        // pcd pipeline
+        "pcd-process",
+        "pcd-cluster",
+        "pcd-tracking",
+        "pcd-detect",
+
+        // output
+        "data-writer",
+        // "image-groundtruth"
+    ],
+    "exchanges": {
+        // data preprocessing
+        "exchange-video-capture": {
+            "type": "amqp",
+            "address": "amqp://127.0.0.1:5672/%2f",
+            "exchange": "VIDEO_CAPTURE",
+            "max_length": 1,
+            "reliable": true
+        },
+        "exchange-lidar-scan": {
+            "type": "amqp",
+            "address": "amqp://127.0.0.1:5672/%2f",
+            "exchange": "LIDAR_SCAN",
+            "max_length": 1,
+            "reliable": true
+        },
+        "exchange-message-matcher-feedback": {
+            "type": "amqp",
+            "address": "amqp://127.0.0.1:5672/%2f",
+            "exchange": "MESSAGE_MATCHER_FEEDBACK",
+            "max_length": 1,
+            "reliable": true
+        },
+        "exchange-message-matcher": {
+            "type": "amqp",
+            "address": "amqp://127.0.0.1:5672/%2f",
+            "exchange": "MESSAGE_MATCHER",
+            "max_length": 1,
+            "reliable": true
+        },
+        // "exchange-message-matcher": {
+        //     "type": "file",
+        //     "dir": "../../cache/2022-03-08-10am-cache",
+        // },
+        // "exchange-message-matcher": {
+        //     "type": "file",
+        //     "dir": "/media/mark/67b4f98e-0e9e-4676-9e2d-3c2349861923/cache-Pingtung-2022-0308-10am",
+        // },
+        // pcd pipeline
+        // "exchange-pcd-process": {
+        //     "type": "file",
+        //     "dir": "../../cache/2022-03-08-10am-cache",
+        // },
+        
+        
+        // "exchange-pcd-process": {
+        //     "type": "file",
+        //     "dir": "/media/mark/67b4f98e-0e9e-4676-9e2d-3c2349861923/pcd-process-cache-Pingtung-2022-0308-10am-2",
+        // },
+        "exchange-pcd-process": {
+            "type": "amqp",
+            "address": "amqp://127.0.0.1:5672/%2f",
+            "exchange": "PCD_PROCESS",
+            "max_length": 1,
+            "reliable": true
+        },
+
+
+        // "exchange-pcd-cluster": {
+        //     "type": "amqp",
+        //     "address": "amqp://127.0.0.1:5672/%2f",
+        //     "exchange": "PCD_CLUSTER",
+        //     "max_length": 1,
+        //     "reliable": true
+        // },
+        "exchange-pcd-cluster": {
+            "type": "file",
+            "dir": "/media/mark/67b4f98e-0e9e-4676-9e2d-3c2349861923/caches/pcd-cluster-cache-Pingtung-2022-0308-10am-no-camera",
+            // "dir": "/media/mark/67b4f98e-0e9e-4676-9e2d-3c2349861923/caches/pcd-cluster-cache-Pingtung-2022-0308-10am",
+            // "dir": "/media/mark/67b4f98e-0e9e-4676-9e2d-3c2349861923/caches/subset",
+        },
+
+        "exchange-pcd-detect": {
+            "type": "amqp",
+            "address": "amqp://127.0.0.1:5672/%2f",
+            "exchange": "WAYSIDE_PCD_DETECT",
+            "max_length": 1,
+            "reliable": true
+        },
+        // "exchange-pcd-detect": {
+        //     "type": "file",
+        //     "dir": "/home/mark/wayside-portal/exp/mark-exp/tracking-refinement/2022-11-21T21:40:21.833034143+08:00/dataframes",
+        // },
+
+        "exchange-pcd-tracking": {
+            "type": "amqp",
+            "address": "amqp://127.0.0.1:5672/%2f",
+            "exchange": "PCD_TRACKING",
+            "max_length": 1,
+            "reliable": true
+        },
+
+    },
+    "connections": {
+        // data preprocessing
+        "exchange-video-capture": {
+            "<": ["video-capture"],
+            ">": ["message-matcher"],
+        },
+        "exchange-lidar-scan": {
+            "<": ["lidar-scan"],
+            ">": ["message-matcher"],
+        },
+        "exchange-message-matcher-feedback": {
+            "<": ["message-matcher"],
+            ">": ["video-capture", "lidar-scan"],
+        },
+        "exchange-message-matcher": {
+            "<": ["message-matcher"],
+            ">": ["pcd-process"],
+        },
+        "exchange-pcd-process": {
+            "<": ["pcd-process"],
+            ">": ["data-writer"],
+        },
+
+        // pcd pipeline
+        // "exchange-pcd-process": {
+        //     "<": ["pcd-process"],
+        //     ">": ["pcd-cluster"],
+        // },
+        // "exchange-pcd-cluster": {
+        //     "<": ["pcd-cluster"],
+        //     ">": ["pcd-tracking"],
+        // },
+
+         // "exchange-pcd-process": {
+        //     "<": ["pcd-process"],
+        //     ">": ["pcd-detect"],
+        // },
+        // "exchange-pcd-detect": {
+        //     "<": ["pcd-detect"],
+        //     ">": ["pcd-tracking"],
+        // },
+        // "exchange-pcd-tracking": {
+        //     "<": ["pcd-tracking"],
+        //     ">": ["data-writer"],
+        // },
+    },
+}

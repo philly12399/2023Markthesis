@@ -1,0 +1,65 @@
+{
+    "version": "0.2.0",
+    "lossy": true,
+    "amqp_consumer": "../connects/amqp-wayside-logger.json",
+    "major_lidar_device": "wayside_1.lidar1",
+    "infra": "../params.json",
+    "filter_distance_in_m": 2.5,
+    "road_direction_azimuth": 232,
+    "filter_angle": 30,
+    "thi_output": {
+        "enabled": true,
+        "dir": "../../output/thi_output",
+        "sensor_info_dir": "../thi/sensor_divisional-island.json",
+        "road_info_dir": "../thi/road.json",
+    },
+    // "database": {
+    //     "enabled": true,
+    //     "url": "postgres://postgres:newslab442244@localhost/wayside",
+    //     "file_dir": "storage"
+    // },
+    "waysides": [
+        {
+            "name": "wayside_1",
+            "wayside_info_dir": "../thi/sensor_wayside1.json",
+            "road_info_dir": "../thi/road.json",
+            "longitude": 121.221903,
+            "latitude": 25.020248,
+            "azimuth": 311,
+            "sensors": [
+                "camera1",
+                "camera2",
+                "camera3",
+                "lidar1",
+            ]
+        },
+        {
+            "name": "wayside_2",
+            "wayside_info_dir": "../thi/sensor_wayside2.json",
+            "road_info_dir": "../thi/road.json",
+            "longitude": 121.221618,
+            "latitude": 25.020048,
+            "azimuth": 303,
+            "sensors": [
+                "camera1",
+                "camera2",
+                "camera3",
+                "lidar1",
+            ]
+        },
+  {
+            "name": "wayside_3",
+            "wayside_info_dir": "../thi/sensor_wayside3.json",
+            "road_info_dir": "../thi/road.json",
+            "longitude": 121.221878,
+            "latitude": 25.020450,
+            "azimuth": 132,
+            "sensors": [
+                "camera1",
+                "camera2",
+                "camera3",
+                "lidar1",
+            ]
+        }
+    ]
+}

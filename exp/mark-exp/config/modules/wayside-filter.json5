@@ -1,0 +1,119 @@
+{
+    "version": "0.2.0",
+    "amqp_consumer": "../connects/amqp-pcd-tracking.json",
+    "amqp_consumer_object_det": "../connects/amqp-wayside-filter.json",
+    "amqp_producer": "../connects/amqp-wayside-logger.json",
+    "major_lidar_device": "wayside_1.lidar1",
+    "point_cloud_filter": {
+        "enabled": true,
+        "filters": [
+            {
+                "type": "InclusiveBox",
+                "min_z": -3,
+                "max_z": 3,
+                "size_x": 10.0,
+                "size_y": 120.0,
+                "center_x": 9.0,
+                "center_y": -20.0,
+                "azimuth_degrees": 8.0,
+            },
+        ],
+    },
+    "visualizer":{
+        "enabled": false,
+    },
+    "source_option":{
+        pcd_only_flag: true,
+    },
+    "projection": {
+        "min_distance_to_lidar": 1,
+        "max_distance_to_lidar": 30,
+        "min_distance_to_camera": 1,
+        "max_distance_to_camera": 30,
+    },
+    "cluster": {
+        "max_neighbor_distance": 0.8,
+        "min_neighbor_count": 4,
+        "distinct_object_penalty": 0.05,
+    },
+    "bbox3d": {
+        "record_cluster_data": false,
+        "ransac_tolerance_outlier": 0.05,
+        "ransac_tolerance_filter": 0.05,
+        "ransac_iteration": 2000,
+    },
+    "infra": "../params.json",
+    "score_weight":{
+        "cluster_relation": 0.0,
+        "deep_sort_tracker": 1.0,
+        "range_angle_score": 0.0, //reverse
+        "vector_pred_score": 0.0, // vector effect
+        "timestamp_score": -0.1,
+    },
+    "track_log": {
+        "enabled": true,
+        "output_dir": "../../output/wayside-filter_logs",
+    },
+    "flow_graph": {
+        "max_num_frames": 5,
+        "num_tracked_frames": 5,
+        "update_thresh": 5,
+        "max_skip_frame": 3,
+    },
+    "logging": {
+        "enabled": false,
+        "output_dir": "../../output/wayside-filter_logs",
+    },
+    "filter_param":{
+        "filter_distance_in_m": 2.5,
+        "road_direction_azimuth": 232,
+        "filter_angle": 30,
+        "disp_x_range_in_m": 1,
+        "disp_y_range_in_m": 0.5,
+        "waysides": [
+            {
+                "name": "wayside_1",
+                "wayside_info_dir": "../thi/sensor_wayside1.json",
+                "road_info_dir": "../thi/road.json",
+                "longitude": 121.221903,
+                "latitude": 25.020248,
+                "azimuth": 311,
+                "sensors": [
+                    "camera1",
+                    "camera2",
+                    "camera3",
+                    "lidar1",
+                ]
+            },
+            {
+                "name": "wayside_2",
+                "wayside_info_dir": "../thi/sensor_wayside2.json",
+                "road_info_dir": "../thi/road.json",
+                "longitude": 121.221618,
+                "latitude": 25.020048,
+                "azimuth": 303,
+                "sensors": [
+                    "camera1",
+                    "camera2",
+                    "camera3",
+                    "lidar1",
+                ]
+            },
+        {
+                "name": "wayside_3",
+                "wayside_info_dir": "../thi/sensor_wayside3.json",
+                "road_info_dir": "../thi/road.json",
+                "longitude": 121.221878,
+                "latitude": 25.020450,
+                "azimuth": 132,
+                "sensors": [
+                    "camera1",
+                    "camera2",
+                    "camera3",
+                    "lidar1",
+                ]
+            }
+        ],
+    },
+
+}

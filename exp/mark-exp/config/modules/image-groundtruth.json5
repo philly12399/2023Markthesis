@@ -1,0 +1,12 @@
+{
+    "version": "0.1.0",
+    "dataflow": "dataflow.json5",
+    "infra": "../params.json",
+    "host_name": "wayside_1",
+    "camera_name": "camera2",
+    "cover_thresh": 0.9,
+    "interpolation_frames": 5,
+//     // "image_saving_config":{
+//     //     "file_dir": "../../image-groundtruth/"
+//     // }
+// }

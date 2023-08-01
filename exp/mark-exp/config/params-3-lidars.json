@@ -1,0 +1,5 @@
+{
+    "type": "InfraV2",
+    "dir": "params",
+    "main_file": "params/main.json5"
+}

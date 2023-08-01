@@ -1,0 +1,6 @@
+{
+    "type": "InfraV2",
+    "dir": "params",
+    "main_file": "params/main_lidar1.json5"
+    // "main_file": "params/main.json5"
+}

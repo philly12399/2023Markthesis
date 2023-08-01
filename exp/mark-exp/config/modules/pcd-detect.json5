@@ -1,0 +1,26 @@
+{
+    "host_names": ["pcd-detect"],
+    "major_lidar_device": {
+        "host": "wayside_1",
+        "device": "lidar1",
+    },
+    "enable_gui": true,
+    "torch_device": "cuda:0",
+    "cfg_base_dir": "../../../../py-bin/pcd-detect",
+    "cfg": "../../../../py-bin/pcd-detect/pcd_detect/cfgs/kitti_models/pv_rcnn.yaml",
+    "ckpt": "../../../../py-bin/pcd-detect/pcd_detect/pv_rcnn_8369.pth",
+    "logging": {
+        "enabled": false,
+        "logging_dir" : "../../output/pcd-detect",
+        // // each sequence is defined by start timestamp (in seconds) and end timestamp
+        // "logging_sequence": [[1628032347, 1628032349],
+        //                      [1628032351, 1628032353]]
+    },
+    "amqp_consumer": "../connects/amqp-pcd-process.json",
+    // "amqp_consumer": "../connects/file-pcd-process.json",
+    "amqp_producer": "../connects/amqp-pcd-detect.json",
+    // "amqp_producer": "../connects/file-pcd-detect.json",
+    "params_dir": "../params",
+    "score_threshold": 0.7,
+    "bbox_id_last_frame_num": 5,
+}
