@@ -7,15 +7,18 @@
     "only_filter": true,
     "keep_noise": false,
     "use_nuscenes": false,
+    "unify_class": false,
     "min_moving_distance": 7,
     "min_bounding_points": 25,
     "kitti_format_config": {
         "subsample_factor": 1,
-        "infra": "/home/yahoo55025502/wayside-portal/exp/mark-exp/config/params.json",
+        "save_points": true,
+        "set_large_object_to_bus": true,
+        "infra": "../../params.json",
         "major_device": "wayside_1.lidar1",
         "save_devices": [
             "wayside_1.lidar1"
         ],
-        "pcd_dir": "/mnt/nfs/wayside_team/mark_thesis_data/self-training-data/pcd-files/pointcloud-lidar1"
+        "pcd_dir": "../../../../../data/pcd-files-lidar1"
     }
 }

@@ -1,12 +1,9 @@
 #!/bin/bash -i
 
 cfg_file=$1
+round=$2
 openpcdet_repo_path=$(realpath ../../repos/OpenPCDet-Mark-thesis)
 tracking_data_dir=$(realpath ../../output/tracking-info)
-
-echo $openpcdet_repo_path
-
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 echo "cfg_file: $cfg_file"
 set -e
@@ -15,7 +12,7 @@ cfg_name=$(basename $cfg_file .yaml)
 if [ -d "$openpcdet_repo_path/data/ST-r0" ]; then
     (
     cd "$openpcdet_repo_path/tools/"
-    python train.py --cfg_file "cfgs/kitti_models/$cfg_name.yaml" --extra_tag ST-r0 \
+    poetry run python train.py --cfg_file "cfgs/kitti_models/$cfg_name.yaml" --extra_tag ST-r0 \
     --set DATA_CONFIG.DATA_PATH "../data/ST-r0"
     )
 else
@@ -42,13 +39,13 @@ else
     echo Writing train.txt ... 
     python "$openpcdet_repo_path/tools/scripts/write_index_file.py" write_index_file ImageSets training/label_2 2
     cd "$openpcdet_repo_path"
-    python -m pcdet.datasets.kitti.kitti_dataset create_kitti_infos tools/cfgs/dataset_configs/kitti_dataset.yaml "data/ST-r0"
+    poetry run python -m pcdet.datasets.kitti.kitti_dataset create_kitti_infos tools/cfgs/dataset_configs/kitti_dataset.yaml "data/ST-r0"
     )
 
     # PV-RCNN Training
     (
     cd "$openpcdet_repo_path/tools/"
-    python train.py --cfg_file "cfgs/kitti_models/$cfg_name.yaml" --extra_tag ST-r0 \
+    poetry run python train.py --cfg_file "cfgs/kitti_models/$cfg_name.yaml" --extra_tag ST-r0 \
     --set DATA_CONFIG.DATA_PATH "../data/ST-r0"
     rm ../data/ST-r0/training/velodyne -r
     )
