@@ -10,7 +10,7 @@
     "torch_device": "cuda:0",
     "cfg_base_dir": "../../../../repos/wayside-portal/py-bin/pcd-detect",
     "cfg": "../../../../repos/wayside-portal/py-bin/pcd-detect/pcd_detect/cfgs/kitti_models/pv_rcnn_2022-01-12.yaml",
-    "ckpt": "/home/yahoo55025502/2023MarkMasterThesis/repos/OpenPCDet-Mark-thesis/output/kitti_models/pv_rcnn_ST-lidar1-r0/ST-r0/ckpt/checkpoint_epoch_80.pth",
+    "ckpt": "/home/yahoo55025502/2023MarkMasterThesis/repos/OpenPCDet-Mark-thesis/output/kitti_models/pv_rcnn_wayside_lidar1/ST-r1/ckpt/checkpoint_epoch_80.pth",
     "logging": {
         "enabled": false,
         "logging_dir": "../../output/pcd-detect"
@@ -22,5 +22,5 @@
     "params_dir": "../params",
     "score_threshold": 0.3,
     "bbox_id_last_frame_num": 5,
-    "constant_reflex": true,
+    "constant_reflex": true
 }
