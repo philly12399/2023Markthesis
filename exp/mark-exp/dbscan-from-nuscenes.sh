@@ -4,8 +4,6 @@ source ./env.sh
 
 ln -sf ./dataflow-nuscenes.json5 ./config/modules/dataflow.json5
 
-
-
 # run nuscenes-data-loader
 start sh -c "cd '${repo_dir}/py-bin/nuscenes-data-loader' && poetry run main --config '${module_config}/nuscenes-data-loader.json5'"
 

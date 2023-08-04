@@ -21,13 +21,13 @@ else
     if [ $round -eq 0 ]
     then
         # Run pcd-cluster + pcd-tracking
-        ./dbscan-from-pcd-files.sh
+        ./dbscan-from-nuscenes.sh
     else
         # Run pcd-detect + pcd-tracking
-        config_path=./config/modules/pcd-detect-lidar1.json5
+        config_path=./config/modules/pcd-detect-pvrcnn-nuscenes.json5
         ckpt_path="$openpcdet_repo_path/output/kitti_models/$cfg_name/ST-r$(($round - 1))/ckpt/checkpoint_epoch_80.pth"
         poetry run python "$openpcdet_repo_path/tools/scripts/revise_json.py" revise_json "$config_path" ckpt "$ckpt_path"
-        ./pvrcnn-detect-from-pcd-files.sh
+        ./pvrcnn-detect-from-nuscenes-wayside.sh
     fi
 
     # Get latest directory name
@@ -36,11 +36,13 @@ else
     # Run module refine-by-track to filter BBoxes by tracking data
     (
     if [ $round -eq 0 ]; then
-        config_path=config/modules/refine-by-track/dbscan-refiner-lidar1.json5
+        config_path=./config/modules/refine-by-track/dbscan-refiner-nuscenes.json5
+    elif [ $round -le 10 ]; then
+        config_path=./config/modules/refine-by-track/model-refiner-nuscenes.json5
     else
-        config_path=config/modules/refine-by-track/model-refiner-lidar1.json5
+        config_path=./config/modules/refine-by-track/model-refiner-nuscenes-r10.json5
     fi
-
+    
     poetry run python "$openpcdet_repo_path/tools/scripts/revise_json.py" revise_json $config_path input_dir "$tracking_data_path"
     ./bin/refine-by-track -c $config_path
     )
@@ -54,9 +56,11 @@ else
     ln -Tfs "$refined_data_path" training 
     mkdir -p ImageSets 
     echo Writing train.txt ... 
-    poetry run python "$openpcdet_repo_path/tools/scripts/write_index_file.py" write_index_file ImageSets training/label_2 2
+    ln -s "$openpcdet_repo_path/nuscenes-preprocessing/params/train_val.txt" ImageSets/train.txt
+    ln -s "$openpcdet_repo_path/nuscenes-preprocessing/params/val.txt" ImageSets/val.txt
+    # poetry run python "$openpcdet_repo_path/tools/scripts/write_index_file.py" write_index_file ImageSets training/label_2 2
     cd "$openpcdet_repo_path"
-    poetry run python -m pcdet.datasets.kitti.kitti_dataset create_kitti_infos tools/cfgs/dataset_configs/kitti_wayside_lidar1.yaml "data/$cfg_name/ST-r$round"
+    poetry run python -m pcdet.datasets.kitti.kitti_dataset create_kitti_infos tools/cfgs/dataset_configs/kitti_nuscenes.yaml "data/$cfg_name/ST-r$round"
     )
 
     # PV-RCNN Training
