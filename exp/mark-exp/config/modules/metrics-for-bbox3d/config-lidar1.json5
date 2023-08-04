@@ -1,0 +1,9 @@
+{
+    "baseline_bbox_dir": "../../../../../repos/OpenPCDet-Mark-thesis/data/pv_rcnn_wayside_lidar1/ST-r0/training/label_2",
+    "pred_bbox_dir": "../../../../../repos/OpenPCDet-Mark-thesis/data/pv_rcnn_wayside_lidar1/ST-r0/training/label_2",
+
+    "gt_bbox_dir": "../../../../../data/annotated-dataset-lidar1/kitti-format/label_2",
+    "pcd_files_dir": "../../../../../data/pcd-files-lidar1",
+    "filter": false,
+    "only_forward": false,
+}

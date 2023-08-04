@@ -1,6 +1,0 @@
-Started pcd-process!
-Started pcd-cluster!
-Started pcd-tracking!
- INFO  pcd_tracking::producer > AMQP producer started
- INFO  winit::platform_impl::platform::x11::window > Guessed window scale factor: 1
- INFO  winit::platform_impl::platform::x11::window > Guessed window scale factor: 1
