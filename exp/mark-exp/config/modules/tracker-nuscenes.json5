@@ -1,7 +1,7 @@
 {
     "version": "0.4.0",
     "dataflow": "dataflow.json5",
-    "enable_gui": true,
+    "enable_gui": false,
     "show_class_gui": true,
     "dark_mode": false,
     // Size of buffer used to store previous tracking results

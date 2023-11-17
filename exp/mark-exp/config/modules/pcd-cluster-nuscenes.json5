@@ -2,7 +2,7 @@
     "version": "0.4.0",
     "dataflow": "dataflow.json5",
     "infra": "../params.json",
-    "enable_gui": true,
+    "enable_gui": false,
     "generate_bbox": true,
     "set_bbox_to_ground": false,
     "cluster": {

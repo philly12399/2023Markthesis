@@ -3,7 +3,7 @@
     "dataflow": "dataflow.json5",
     "infra": "../params.json",
     "device_to_save": "wayside_1.lidar1",
-    "output_dir": "../../../../data/pcd-files-lidar1",
+    "output_dir": "../../../../output/pcd-files-lidar1",
     "num_frames": 50000,
     "active_only": false,
     "save_pcd": true,

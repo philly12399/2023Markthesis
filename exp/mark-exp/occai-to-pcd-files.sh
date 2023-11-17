@@ -2,11 +2,10 @@
 
 source ./env.sh
 
-ln -sf ./dataflow-matcher-to-data-writer.json5 ./config/modules/dataflow.json5
+ln -sf ./dataflow-occai-to-pcd-files.json5 ./config/modules/dataflow.json5
 
 
 function_modules=(
-    # "video-capture"
     "lidar-scan"
     "message-matcher"
     "pcd-process"
