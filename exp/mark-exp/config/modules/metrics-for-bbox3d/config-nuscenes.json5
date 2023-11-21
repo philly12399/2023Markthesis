@@ -1,6 +1,6 @@
 {
     "baseline_bbox_dir": "../../../../../data/modest_data/modest_output_wayside_indexed/label_2",
-    "pred_bbox_dir": "/mnt/mark-disk/self-training-data/nuscenes-tracking-info/exp4-refactor-tracker/input_track/refined-output/kitti-format/label_2",
+    "pred_bbox_dir": "../../../../../repos/OpenPCDet-Mark-thesis/data/pv_rcnn_nusc/ST-r0/training/label_2",
 
     "gt_bbox_dir": "../../../../../data/nuscenes-wayside-format/kitti_format/label_2",
     "pcd_files_dir": "../../../../../data/nuscenes-wayside-format/pointcloud",
