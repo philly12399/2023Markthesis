@@ -2,3 +2,7 @@
 /output
 /exp/mark-exp/config/modules/dataflow.json5
 /poetry.lock
+*.pcd
+*.pcap
+*.bin
+

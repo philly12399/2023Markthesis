@@ -2,6 +2,8 @@
     "baseline_bbox_dir": "../../../../../repos/OpenPCDet-Mark-thesis/data/pv_rcnn_wayside_lidar1/ST-r0/training/label_2",
     "pred_bbox_dir": "../../../../../repos/OpenPCDet-Mark-thesis/data/pv_rcnn_wayside_lidar1/ST-r0/training/label_2",
 
+    // "baseline_bbox_dir":"/mark/repos/OpenPCDet-Mark-thesis/output/kitti_models/pv_rcnn_wayside_lidar1/default/eval/epoch_9/val/default/final_result/data/",
+    // "pred_bbox_dir":"/mark/repos/OpenPCDet-Mark-thesis/output/kitti_models/pv_rcnn_wayside_lidar1/default/eval/epoch_9/val/default/final_result/data/",
     "gt_bbox_dir": "../../../../../data/annotated-dataset-lidar1/kitti-format/label_2",
     "pcd_files_dir": "../../../../../data/pcd-files-lidar1",
     "filter": false,
