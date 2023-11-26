@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 source ./env.sh
-
 ln -sf ./dataflow-occai-to-pcd-files.json5 ./config/modules/dataflow.json5
 
 
