@@ -19,7 +19,7 @@
     "amqp_consumer": "../connects/amqp-pcd-process.json",
     "amqp_producer": "../connects/amqp-pcd-detect.json",
     "pcd_files_dir": "../../../../data/pcd-files-lidar1",
-    "limit_pcd_frames": "10",
+    "limit_pcd_frames": "500",
     "params_dir": "../params",
     "score_threshold": 0.3,
     "bbox_id_last_frame_num": 5,
