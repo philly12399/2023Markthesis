@@ -1,6 +1,6 @@
 {
     "version": "0.3.0",
-    "enable_gui": false,
+    "enable_gui": true,
     "dataflow": "dataflow.json5",
     "infra": "../params.json",
     "major_device": "wayside_1.lidar1",
