@@ -1,7 +1,7 @@
 {
   "ground_filter": {
       "transform": {
-          "translation": [0.0, 0.0, -1.3], //ground coordinate  
+          "translation": [0.0, 0.0, -1.5], //ground coordinate  
           "rotation": ["0deg", "0deg", "0deg"]
       },
       "max_distance": 100.0
@@ -176,20 +176,20 @@
         
       }
   },
-//   "background_filter": {  //occupancy of voxel > threshold -> background
-//       "range": {
-//           // "x_bound": { "imin": -50, "imax": 50 },
-//           // "y_bound": { "imin": -50, "imax": 50 },
-//           // "z_bound": { "imin": -50, "imax": 50 }
-//           "x_bound": [ -50,  50 ],
-//           "y_bound": [ -50,  50 ],
-//           "z_bound": [ -50,  50 ]
-//       },
-//       "voxel_size": {
-//           "x_size": 0.5,
-//           "y_size": 0.5,
-//           "z_size": 0.5
-//       },
-//       "background_threshold": 0.5
-//   }
+  "background_filter": {  //occupancy of voxel > threshold -> background
+      "range": {
+          // "x_bound": { "imin": -50, "imax": 50 },
+          // "y_bound": { "imin": -50, "imax": 50 },
+          // "z_bound": { "imin": -50, "imax": 50 }
+          "x_bound": [ -30,  41 ],
+          "y_bound": [ -40,  40 ],
+          "z_bound": [ -40,  40 ]
+      },
+      "voxel_size": {
+          "x_size": 0.5,
+          "y_size": 0.5,
+          "z_size": 0.5
+      },
+      "background_threshold": 0.6
+  }
 }
