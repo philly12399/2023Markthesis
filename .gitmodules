@@ -1,6 +1,6 @@
 [submodule "repos/OpenPCDet-Mark-thesis"]
 	path = repos/OpenPCDet-Mark-thesis
-	url = git@github.com:yahoo55025502/OpenPCDet-Mark-thesis.git
+	url = git@github.com:philly12399/OpenPCDet-Mark-thesis.git
 [submodule "repos/MODEST"]
 	path = repos/MODEST
 	url = git@github.com:YurongYou/MODEST.git

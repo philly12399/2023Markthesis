@@ -2,7 +2,7 @@
     "input_dir": "/mark/output/tracking-info/4300",
     "num_output_frames": 4300,
     "num_devices": 1,
-    "num_search_objects": 20,
+    "num_search_objects": 100,
     "debug_mode": false,
     "only_filter": false,
     "keep_noise": false,
