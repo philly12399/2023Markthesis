@@ -1,0 +1,27 @@
+{
+  "host_names": [
+    "pcd-detect"
+  ],
+  "major_lidar_device": {
+    "host": "wayside_1",
+    "device": "lidar1"
+  },
+  "enable_gui": true,
+  "torch_device": "cuda:0",
+  "cfg_base_dir": "../../../../repos/wayside-portal/py-bin/pcd-detect/pcd_detect",
+  "cfg": "../../../../repos/wayside-portal/py-bin/pcd-detect/pcd_detect/cfgs/kitti_models/pv_rcnn_kitti.yaml",
+  "ckpt": "/markdata/thesis_pretrained_models/pv_rcnn_8369.pth",
+  "logging": {
+    "enabled": true,
+    "logging_dir": "../../output/pcd-detect"
+  },
+  "amqp_consumer": "../connects/amqp-pcd-process.json",
+  "amqp_producer": "../connects/amqp-pcd-detect.json",
+  "pcd_files_dir": "/KITTI_tracking/training/velodyne/0000",
+  "limit_pcd_frames": "2000",
+  "params_dir": "../params",
+  "score_threshold": 0.3,
+  "bbox_id_last_frame_num": 5,
+  "constant_reflex": true,
+  "output_dir": "../../../../output/pcd-detect/0000"
+}

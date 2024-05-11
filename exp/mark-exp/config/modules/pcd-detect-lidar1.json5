@@ -8,7 +8,7 @@
     },
     "enable_gui": true,
     "torch_device": "cuda:0",
-    "cfg_base_dir": "../../../../repos/wayside-portal/py-bin/pcd-detect/",
+    "cfg_base_dir": "../../../../repos/wayside-portal/py-bin/pcd-detect",
     "cfg": "../../../../repos/wayside-portal/py-bin/pcd-detect/pcd_detect/cfgs/kitti_models/pv_rcnn_pingtungval.yaml",
     // "ckpt": "/markdata/thesis_pretrained_models/pvrcnn_wayside/ST-r10/default/ckpt/checkpoint_epoch_80.pth",
     "ckpt":"/markdata/thesis_pretrained_models/pvrcnn_wayside/ST-r10/default/ckpt/checkpoint_epoch_80.pth",
